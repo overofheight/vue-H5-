@@ -22,6 +22,14 @@ const router = new VueRouter({
         title: '登录',
       },
     },
+    {
+      path: '/cc',
+      name: 'cc',
+      component: () => import('@/pages/cc'),
+      meta: {
+        title: 'cc',
+      },
+    },
   ],
 });
 
