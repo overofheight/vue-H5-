@@ -26,11 +26,11 @@ npm run build
 │  │  └─App.vue               布局文件
 │  ├─pages                    vue页面目录
 │  │  ├─home                  页面目录（示例）
-│  │  │  ├─components         页面私有组件目录（推荐组件内再建文件夹，继续使用index命名vue文件）
-│  │  │  └─index.vue          页面组件（推荐index命名vue文件）
+│  │  │  ├─components         页面私有组件目录
+│  │  │  └─index.vue          页面组件
 │  │  └─login                 页面目录（示例）
-│  │     ├─components         页面私有组件目录（推荐组件内再建文件夹，继续使用index命名vue文件）
-│  │     └─index.vue          页面组件（推荐index命名vue文件）
+│  │     ├─components         页面私有组件目录
+│  │     └─index.vue          页面组件
 │  ├─router                   路由目录
 │  ├─services                 请求api方法目录
 │  ├─store                    vuex目录

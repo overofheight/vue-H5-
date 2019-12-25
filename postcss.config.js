@@ -7,5 +7,18 @@ module.exports = {
       minPixelValue: 1, // (Number) Set the minimum pixel value to replace.
       mediaQuery: false, // (Boolean) Allow px to be converted in media queries.
     },
+    autoprefixer: {
+      overrideBrowserslist: [
+        '> 1%',
+        'last 3 versions',
+        'iOS >= 8',
+        'Android >= 4',
+        'Chrome >= 40'
+      ]
+    }
   },
+     
+
+  
+
 };
