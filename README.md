@@ -7,7 +7,7 @@ npm run dev
 or
 npm run build
 ```
-
+## 添加sourcetree 工具
 ## 项目结构
 ```
 ├─build                       webpack编译配置文件目录
