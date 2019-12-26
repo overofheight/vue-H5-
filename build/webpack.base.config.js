@@ -14,6 +14,14 @@ const copyWebpackPlugin = require('copy-webpack-plugin');
 const HappyPack = require('happypack');
 const os = require('os');
 const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length });
+
+// 显示进程的完成进度
+const ProgressBarPlugin = require('progress-bar-webpack-plugin');
+// 设置进度字体颜色
+const chalk = require('chalk'); // 改变命令行中输出日志颜色插件
+//一个编译提示的webpack插件！
+const FriendlyErrorsPlugin = require("friendly-errors-webpack-plugin");
+
 const config = {
   entry: {
     main: path.resolve(__dirname, "../src/main.js")
@@ -42,8 +50,8 @@ const config = {
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
-          'postcss-loader',
           'less-loader',
+          'postcss-loader',
         ],
       },
       {
@@ -143,6 +151,13 @@ const config = {
       to: path.resolve(__dirname, '../dist'),
       ignore: ['.*'],
     }]),
+    // 显示进度插件
+    new ProgressBarPlugin({
+      format: chalk.green('Progressing') + '[:bar]' + chalk.green(':percent') + '(:elapsed seconds)',
+      clear: false
+    }),
+    // 友好的错误提示
+    new FriendlyErrorsPlugin(),
     // 每次编译清理目录
     new CleanWebpackPlugin(),
     new VueLoaderPlugin(),
