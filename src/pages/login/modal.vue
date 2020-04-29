@@ -226,7 +226,6 @@ export default {
     &-bottom,
     &-left {
         &:extend(.absolute-position);
-        // @extend .absolute-position;
         z-index: @modal-container-z;
         display: flex;
     }
